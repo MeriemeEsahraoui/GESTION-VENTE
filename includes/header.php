@@ -49,8 +49,8 @@
         </li>
         <li>
             <a href="#">
-                <i class="fas fa-chart-bar"></i>
-                <span>Rapports</span>
+                <i class="fas fa-users"></i>
+                <span>Utilisateurs</span>
             </a>
         </li>
     </ul>

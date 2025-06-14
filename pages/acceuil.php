@@ -42,7 +42,7 @@
                         <i class="fas fa-dollar-sign"></i>
                     </div>
                 </div>
-                <div class="stat-value">€45,678</div>
+                <div class="stat-value">DHs45,678</div>
                 <div class="stat-label">Chiffre d'affaires</div>
             </div>
 
