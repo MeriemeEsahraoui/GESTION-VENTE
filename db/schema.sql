@@ -4,6 +4,7 @@ CREATE TABLE utilisateurs (
     nom VARCHAR(100),
     email VARCHAR(100) UNIQUE,
     mot_de_passe VARCHAR(255),
+    status INT DEFAULT 1,
     rôle ENUM('admin', 'vendeur') NOT NULL,
     créé_le TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
@@ -15,6 +16,9 @@ CREATE TABLE clients (
     email VARCHAR(100),
     téléphone VARCHAR(20),
     adresse TEXT,
+    ville VARCHAR(100),
+    entreprise VARCHAR(100),
+    status INT DEFAULT 1,
     créé_le TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -25,6 +29,9 @@ CREATE TABLE produits (
     description TEXT,
     prix_unitaire DECIMAL(10,2),
     quantité_en_stock INT,
+    fournisseur VARCHAR(100),
+    seuil_stock INT DEFAULT 0,
+    status INT DEFAULT 1,
     créé_le TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

@@ -11,15 +11,6 @@
             <i class="fas fa-bars"></i>
         </button>
         <h1 class="page-title">Acceuil</h1>
-        <div class="user-menu">
-            <div class="user-profile">
-                <div class="user-avatar">ME</div>
-                <div class="user-info">
-                    <h6>Meriem Essahraoui</h6>
-                    <span>Administrateur</span>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- Dashboard Content -->

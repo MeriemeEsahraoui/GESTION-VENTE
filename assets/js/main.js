@@ -32,19 +32,20 @@ function toggleSubmenu(element) {
     }
 }
 
-// Active Menu Item
+// Active Menu Item (only for mobile sidebar closing)
 document.querySelectorAll('.sidebar-menu a').forEach(link => {
     link.addEventListener('click', function(e) {
-        // Don't prevent default for submenu toggles
-        if (!this.onclick) {
+        // Don't prevent default for submenu toggles or regular navigation
+        if (!this.onclick && !this.href) {
             e.preventDefault();
-            
-            // Remove active class from all links
-            document.querySelectorAll('.sidebar-menu a').forEach(l => l.classList.remove('active'));
-            
-            // Add active class to clicked link
-            this.classList.add('active');
         }
+        
+        // Close mobile sidebar when a menu item is clicked
+        if (window.innerWidth <= 768) {
+            toggleMobileSidebar();
+        }
+        
+        // Don't override server-side active state - let PHP handle it
     });
 });
 
@@ -96,4 +97,29 @@ function updateTooltips() {
 // Update tooltips when sidebar is toggled
 document.querySelector('.sidebar-toggle').addEventListener('click', function() {
     setTimeout(updateTooltips, 300); // Wait for animation to complete
+});
+
+// Logout function
+function logout() {
+    if (confirm('Êtes-vous sûr de vouloir vous déconnecter ?')) {
+        // Clear session data
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('userEmail');
+        localStorage.removeItem('userName');
+        localStorage.removeItem('userRole');
+        
+        // Redirect to login page
+        window.location.href = '../index.php';
+    }
+}
+
+// Check if user is logged in on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Only check on pages other than login
+    if (!window.location.pathname.includes('index.php')) {
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            // Not logged in, redirect to login
+            window.location.href = '../index.php';
+        }
+    }
 });
