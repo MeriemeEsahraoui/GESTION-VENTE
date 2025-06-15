@@ -52,9 +52,9 @@
                         
                         <form id="loginForm">
                             <div class="form-floating">
-                                <input type="email" class="form-control" id="email" placeholder="nom@exemple.com" required>
-                                <label for="email">
-                                    <i class="fa fa-envelope me-2"></i>Adresse email
+                                <input type="text" class="form-control" id="username" placeholder="nom@exemple.com" required>
+                                <label for="username">
+                                    <i class="fa fa-envelope me-2"></i>Nom d'utilisateur ou e-mail
                                 </label>
                             </div>
                             
