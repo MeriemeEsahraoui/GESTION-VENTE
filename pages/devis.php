@@ -35,9 +35,9 @@
                                             <select class="form-select" id="statusFilter">
                                                 <option value="">Tous les statuts</option>
                                                 <option value="en_attente">En attente</option>
-                                                <option value="accept�">Accept�</option>
-                                                <option value="refus�">Refus�</option>
-                                                <option value="expir�">Expir�</option>
+                                                <option value="accepte">Accepte</option>
+                                                <option value="refuse">Refuse</option>
+                                                <option value="expire">Expire</option>
                                             </select>
                                         </div>
                                     </div>
@@ -105,7 +105,7 @@
                                 </div>
                                 <div class="flex-grow-1 ms-3">
                                     <h4 class="mb-0 fw-bold">89</h4>
-                                    <p class="text-muted mb-0 small">Accept�s</p>
+                                    <p class="text-muted mb-0 small">Acceptes</p>
                                 </div>
                             </div>
                         </div>
@@ -148,10 +148,10 @@
                                 <table class="table table-hover mb-0">
                                     <thead class="table-light">
                                         <tr>
-                                            <th>N� Devis</th>
+                                            <th>Ne Devis</th>
                                             <th>Client</th>
                                             <th>Date</th>
-                                            <th>Validit�</th>
+                                            <th>Validite</th>
                                             <th>Montant</th>
                                             <th>Statut</th>
                                             <th style="width: 140px;">Actions</th>
@@ -193,7 +193,7 @@
                                             </td>
                                             <td>
                                                 <div class="btn-group btn-group-sm" role="group">
-                                                    <a href="devis_detail.php?id=1" class="btn btn-outline-primary" title="Voir d�tail">
+                                                    <a href="devis_detail.php?id=1" class="btn btn-outline-primary" title="Voir detail">
                                                         <i class="fas fa-eye"></i>
                                                     </a>
                                                     <a href="_devis.php?id=1" class="btn btn-outline-warning" title="Modifier">
@@ -239,11 +239,11 @@
                                                 <span class="fw-bold text-success">8,950.00 DH</span>
                                             </td>
                                             <td>
-                                                <span class="badge bg-success">Accept�</span>
+                                                <span class="badge bg-success">Accepte</span>
                                             </td>
                                             <td>
                                                 <div class="btn-group btn-group-sm" role="group">
-                                                    <a href="devis_detail.php?id=2" class="btn btn-outline-primary" title="Voir d�tail">
+                                                    <a href="devis_detail.php?id=2" class="btn btn-outline-primary" title="Voir detail">
                                                         <i class="fas fa-eye"></i>
                                                     </a>
                                                     <a href="_devis.php?id=2" class="btn btn-outline-warning" title="Modifier">
@@ -283,17 +283,17 @@
                                                     <i class="fas fa-calendar text-danger me-1"></i>
                                                     7 jours
                                                 </div>
-                                                <small class="text-danger">Expir� le 15/05/2024</small>
+                                                <small class="text-danger">Expire le 15/05/2024</small>
                                             </td>
                                             <td>
                                                 <span class="fw-bold text-success">3,200.00 DH</span>
                                             </td>
                                             <td>
-                                                <span class="badge bg-danger">Expir�</span>
+                                                <span class="badge bg-danger">Expire</span>
                                             </td>
                                             <td>
                                                 <div class="btn-group btn-group-sm" role="group">
-                                                    <a href="devis_detail.php?id=3" class="btn btn-outline-primary" title="Voir d�tail">
+                                                    <a href="devis_detail.php?id=3" class="btn btn-outline-primary" title="Voir detail">
                                                         <i class="fas fa-eye"></i>
                                                     </a>
                                                     <a href="_devis.php?id=3" class="btn btn-outline-warning" title="Modifier">
@@ -316,7 +316,7 @@
                         <div class="card-footer bg-white border-0">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="text-muted small">
-                                    Affichage de 1 � 10 sur 156 devis
+                                    Affichage de 1 e 10 sur 156 devis
                                 </div>
                                 <nav>
                                     <ul class="pagination pagination-sm mb-0">
@@ -352,7 +352,7 @@
 
 <script>
 function deleteDevis(id) {
-    if (confirm('�tes-vous s�r de vouloir supprimer ce devis ?')) {
+    if (confirm('etes-vous ser de vouloir supprimer ce devis ?')) {
         // AJAX call to delete devis
         console.log('Deleting devis with ID:', id);
     }
