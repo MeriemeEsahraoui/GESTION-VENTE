@@ -18,7 +18,7 @@ function isActive($page, $current) {
         case 'devis_detail.php':
         case 'edit_devis.php':
             return ($page === 'devis.php') ? 'active' : '';
-        case 'add_bon_commande.php':
+        case 'bon_commande.php':
         case 'bon_commande_detail.php':
         case 'edit_bon_commande.php':
             return ($page === 'bons_commande.php') ? 'active' : '';
@@ -94,7 +94,7 @@ function isActive($page, $current) {
             </a>
         </li>
         <li>
-            <a href="commandes.php" class="<?php echo isActive('commandes.php', $current_page); ?>">
+            <a href="factures.php" class="<?php echo isActive('commandes.php', $current_page); ?>">
                 <i class="fas fa-file-invoice-dollar"></i>
                 <span>Factures</span>
             </a>
